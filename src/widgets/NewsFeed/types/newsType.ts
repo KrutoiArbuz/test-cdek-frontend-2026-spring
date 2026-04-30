@@ -32,3 +32,8 @@ export type NewsRubricDto = {
   slug: string;
   name: string;
 };
+
+export type NewsPagesParamsApi = {
+  perPage: number;
+  page: number;
+};
