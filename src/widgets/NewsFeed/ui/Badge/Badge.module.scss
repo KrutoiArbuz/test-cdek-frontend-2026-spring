@@ -4,8 +4,9 @@
     border-radius: $border-radius-sm;
     display: inline-flex;
     align-items: center;
-    gap: 3.5px;
+    gap: $space-xxxs;
     padding: $space-xxs $space-xs;
+    white-space: nowrap;
     background-color: var(--color-badge-gray-bg, $color-badge-gray-bg);
     color: var(--color-badge-gray-text, $color-badge-gray-text);
 

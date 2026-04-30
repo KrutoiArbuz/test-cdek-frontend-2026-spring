@@ -13,6 +13,7 @@ export type NewsDto = {
   viewCount: number;
   publishedAt: string;
   rubrics: NewsRubricDto[];
+  directions: NewsDirectionDto[];
 };
 
 export type NewsCoverDto = {
@@ -28,6 +29,12 @@ export type NewsImageDto = {
 };
 
 export type NewsRubricDto = {
+  id: number;
+  slug: string;
+  name: string;
+};
+
+export type NewsDirectionDto = {
   id: number;
   slug: string;
   name: string;

@@ -4,7 +4,8 @@
 .metaItem {
     display: inline-flex;
     align-items: center;
-    gap: 3.5px;
+    white-space: nowrap;
+    gap: $space-xxxs;
     color: var(--color-text-second, $color-text-second);
 }
 

@@ -1,0 +1,96 @@
+@use '../../../../shared/styles/variables' as *;
+@use '../../../../shared/styles/mixins' as *;
+
+.newsCard {
+    display: flex;
+    gap: $space-sm;
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        gap: $space-sm;
+        justify-content: space-between;
+        flex: 1;
+    }
+
+    &__image {
+        width: 184px;
+        height: 127px;
+        flex-shrink: 0;
+
+        &_hideMobile {
+            @include respond-mobile {
+                display: none;
+            }
+        }
+    }
+
+    &__header {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+    }
+
+    &__meta {
+        display: flex;
+        justify-content: space-between;
+        gap: $space-sm;
+    }
+
+    &__metaBadges {
+        display: flex;
+        flex-wrap: wrap;
+        gap: $space-xs;
+    }
+
+    &__stats {
+        display: flex;
+        gap: $space-xs;
+    }
+
+    @include respond-mobile {
+        flex-direction: column;
+
+        &__image {
+            width: 100%;
+        }
+    }
+
+    &_business {
+        flex-direction: column;
+
+        .newsCard__content {
+            gap: $space-xxxs;
+        }
+
+        .newsCard__image {
+            width: 100%;
+            height: 200px;
+        }
+
+        .newsCard__header {
+            gap: $space-xxxs;
+        }
+
+        .newsCard__meta {
+            gap: $space-xxxs;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+        }
+
+        .newsCard__metaBadges {
+            gap: $space-xxxs;
+        }
+
+        .newsCard__meta>*+*::before {
+            content: '·';
+        }
+
+        .newsCard__stats {
+            gap: $space-xxxs;
+            color: var(--color-text-second, $color-text-second);
+        }
+    }
+
+}
