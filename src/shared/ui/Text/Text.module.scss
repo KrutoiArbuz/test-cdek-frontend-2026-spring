@@ -1,0 +1,65 @@
+@use '../../styles/variables' as *;
+
+
+.text {
+    margin: 0;
+    color: inherit;
+
+
+    &_p21 {
+        font-size: $font-size-lg;
+    }
+
+    &_p15_75 {
+        font-size: $font-size-md;
+        line-height: $line-height-md;
+
+    }
+
+    &_p14 {
+        font-size: $font-size-sm;
+        line-height: $line-height-sm;
+    }
+
+    &_p12_25 {
+        font-size: $font-size-xs;
+
+    }
+
+    &_p10_5 {
+        font-size: $font-size-xxs;
+
+    }
+
+    &_colorPrimary {
+        color: var(--color-text-main, $color-text-main);
+    }
+
+    &_colorSecondary {
+        color: var(--color-text-second, $color-text-second);
+    }
+
+    &_weightRegular {
+        font-weight: 400;
+    }
+
+    &_weightDemiBold {
+        font-weight: 600;
+    }
+
+    &_fontPrimary {
+        font-family: $font-primary;
+    }
+
+    &_fontSecondary {
+        font-family: $font-secondary;
+    }
+
+    &_maxLines {
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: var(--max-lines);
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}

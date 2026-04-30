@@ -1,0 +1,15 @@
+.iconButton {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3.5px;
+
+    &:disabled {
+        color: var(--color-text-second);
+        cursor: not-allowed;
+    }
+
+    &:hover:not(:disabled) {
+        color: var(--color-text-second);
+    }
+}
