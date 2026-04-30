@@ -1,0 +1,31 @@
+@use '../../../../shared/styles/variables' as *;
+
+.badge {
+    border-radius: $border-radius-sm;
+    display: inline-flex;
+    align-items: center;
+    gap: 3.5px;
+    padding: $space-xxs $space-xs;
+    background-color: var(--color-badge-gray-bg, $color-badge-gray-bg);
+    color: var(--color-badge-gray-text, $color-badge-gray-text);
+
+    &_blue {
+        background-color: var(--color-badge-blue-bg, $color-badge-blue-bg);
+        color: var(--color-badge-blue-text, $color-badge-blue-text);
+    }
+
+    &_yellow {
+        background-color: var(--color-badge-yellow-bg, $color-badge-yellow-bg);
+        color: var(--color-badge-yellow-text, $color-badge-yellow-text);
+    }
+
+    &_gray {
+        background-color: var(--color-badge-gray-bg, $color-badge-gray-bg);
+        color: var(--color-badge-gray-text, $color-badge-gray-text);
+    }
+}
+
+.icon {
+    display: inline-flex;
+    flex-shrink: 0;
+}

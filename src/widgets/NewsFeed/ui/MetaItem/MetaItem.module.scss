@@ -1,0 +1,30 @@
+@use '../../../../shared/styles/variables' as *;
+@use '../../../../shared/styles/mixins' as *;
+
+.metaItem {
+    display: inline-flex;
+    align-items: center;
+    gap: 3.5px;
+    color: var(--color-text-second, $color-text-second);
+}
+
+
+.icon {
+    display: inline-flex;
+    flex-shrink: 0;
+    font-size: $font-size-lg;
+
+    svg {
+        width: 1em;
+        height: 1em;
+    }
+
+
+    &_small {
+        font-size: $font-size-sm;
+    }
+
+    &_medium {
+        font-size: $font-size-lg;
+    }
+}

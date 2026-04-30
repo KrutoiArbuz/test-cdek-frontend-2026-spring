@@ -1,0 +1,8 @@
+@use '../../../../shared/styles/variables' as *;
+
+.errorState {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: $space-xs;
+}

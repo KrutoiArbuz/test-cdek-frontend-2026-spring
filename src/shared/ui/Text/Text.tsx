@@ -42,8 +42,9 @@ const Text = ({ children, className, font, weight, view, color, tag, maxLines }:
     s.text,
     viewClassMap[view || 'p15.75'],
     weightClassMap[weight || 'regular'],
-    colorClassMap[color || 'primary'],
+    color && colorClassMap[color],
     font && fontClassMap[font],
+    maxLines && s.text_maxLines,
     className
   );
 
