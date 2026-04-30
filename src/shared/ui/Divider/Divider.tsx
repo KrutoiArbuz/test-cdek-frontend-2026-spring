@@ -1,5 +1,7 @@
+import s from './Divider.module.scss';
+
 const Divider = () => {
-  return <div>Divider</div>;
+  return <div className={s.divider} />;
 };
 
 export default Divider;
