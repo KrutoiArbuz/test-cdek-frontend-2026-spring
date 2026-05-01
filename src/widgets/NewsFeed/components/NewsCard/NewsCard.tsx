@@ -25,7 +25,7 @@ const NewsCard = ({
   hideCoverOnMobile,
   hideCover,
   isTop,
-  news: { title, cover, publishedAt, likeCount, viewCount, rubrics, directions },
+  news: { title, cover, publishedAt, likeCount, viewCount, rubrics, directions = [] },
 }: NewsCardProps) => {
   const isBusiness = variant === 'business';
 
@@ -41,7 +41,7 @@ const NewsCard = ({
           alt={title}
           className={imageClass}
           srcSet={`${getImageUrl(cover.images[0].s)} 400w,${getImageUrl(cover.images[0].m)} 800w,${getImageUrl(cover.images[0].l)} 1200w,${getImageUrl(cover.images[0].hd)} 1920w`}
-          sizes="(max-width: 589px) 100vw, 184px"
+          sizes={isBusiness ? '(max-width: 589px) 100vw, calc(100vw - 42px)' : '(max-width: 589px) 100vw, 184px'}
         />
       )}
       <div className={s.newsCard__content}>

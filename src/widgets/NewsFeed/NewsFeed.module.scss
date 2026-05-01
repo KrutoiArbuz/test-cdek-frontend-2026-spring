@@ -1,0 +1,31 @@
+@use '../../shared/styles/variables' as *;
+@use '../../shared/styles/mixins' as *;
+
+
+.newsFeed {
+    display: flex;
+    flex-direction: column;
+    gap: $space-xs;
+    border-radius: $border-radius-lg;
+    padding: $space-md;
+
+    @include respond-mobile {
+        padding: $space-sm;
+    }
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: $space-md;
+}
+
+.pagination {
+    align-self: flex-end;
+}

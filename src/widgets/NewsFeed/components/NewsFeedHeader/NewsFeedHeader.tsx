@@ -7,7 +7,7 @@ import s from './NewsFeedHeader.module.scss';
 type NewsFeedHeaderProps = {
   className?: string;
   titleText: string;
-  secondaryText: string;
+  secondaryText: React.ReactNode;
 };
 
 const NewsFeedHeader = ({ className, titleText, secondaryText }: NewsFeedHeaderProps) => {

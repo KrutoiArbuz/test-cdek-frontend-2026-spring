@@ -13,7 +13,7 @@ export type NewsDto = {
   viewCount: number;
   publishedAt: string;
   rubrics: NewsRubricDto[];
-  directions: NewsDirectionDto[];
+  directions?: NewsDirectionDto[];
 };
 
 export type NewsCoverDto = {
