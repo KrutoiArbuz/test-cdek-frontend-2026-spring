@@ -22,7 +22,7 @@ const Badge = ({ children, className, color = 'gray', borderRadius, icon }: Badg
   return (
     <div className={badgeClass} style={{ borderRadius }}>
       {icon && <span className={s.icon}>{icon}</span>}
-      <Text font="primary" view="p10.5">
+      <Text font="primary" view="p10.5" tag="span">
         {children}
       </Text>
     </div>

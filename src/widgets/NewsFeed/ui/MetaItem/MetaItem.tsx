@@ -23,7 +23,7 @@ const MetaItem = ({ children, className, icon, iconSize }: MetaItemProps) => {
   return (
     <div className={metaItemClass}>
       {icon && <span className={iconClass}>{icon}</span>}
-      <Text font="primary" view="p12.25">
+      <Text font="primary" view="p12.25" tag="span">
         {children}
       </Text>
     </div>

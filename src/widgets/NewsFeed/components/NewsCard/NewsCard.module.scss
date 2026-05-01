@@ -59,18 +59,19 @@
 
     &_business {
         flex-direction: column;
+        gap: 10.5px;
 
         .newsCard__content {
-            gap: $space-xxxs;
+            gap: 0;
         }
 
         .newsCard__image {
             width: 100%;
-            height: 200px;
+            height: 160px;
         }
 
-        .newsCard__header {
-            gap: $space-xxxs;
+        .newsCard__topBadge {
+            margin-bottom: $space-xxxs;
         }
 
         .newsCard__meta {
@@ -83,7 +84,7 @@
             gap: $space-xxxs;
         }
 
-        .newsCard__meta>*+*::before {
+        .newsCard__meta>*:not(:last-child)::after {
             content: '·';
         }
 

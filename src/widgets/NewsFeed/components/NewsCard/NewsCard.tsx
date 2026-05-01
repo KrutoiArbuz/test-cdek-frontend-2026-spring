@@ -47,18 +47,23 @@ const NewsCard = ({
       <div className={s.newsCard__content}>
         <div className={s.newsCard__header}>
           {isBusiness && isTop && (
-            <Badge color="yellow" icon={<IconStarFilled size={12.25} />} borderRadius={100}>
+            <Badge
+              color="yellow"
+              icon={<IconStarFilled size={12.25} />}
+              borderRadius={100}
+              className={s.newsCard__topBadge}
+            >
               Топ новость
             </Badge>
           )}
 
           {!isBusiness && (
-            <Text font="secondary" view="p14" color="secondary">
+            <Text font="secondary" view="p14" color="secondary" tag="span">
               {formatDateTime(publishedAt)}
             </Text>
           )}
 
-          <Text font="secondary" view="p15.75">
+          <Text font="secondary" view="p15.75" tag="h3">
             {title}
           </Text>
         </div>
