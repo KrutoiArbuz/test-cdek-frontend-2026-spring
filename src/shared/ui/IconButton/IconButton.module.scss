@@ -1,8 +1,10 @@
+@use '../../styles/variables' as *;
+
 .iconButton {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    padding: 3.5px;
+    padding: $space-xxxs;
 
     &:disabled {
         color: var(--color-text-second);

@@ -8,3 +8,11 @@
     }
 
 }
+
+@mixin respond-widget-mobile {
+
+    @container news-feed (max-width: #{$breakpoint-md - 1px}) {
+        @content;
+    }
+
+}

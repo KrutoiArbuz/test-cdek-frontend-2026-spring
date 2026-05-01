@@ -1,0 +1,56 @@
+@use '../shared/styles/variables' as *;
+@use '../shared/styles/mixins' as *;
+
+.app {
+    min-height: 100vh;
+    background: #1c1c1c;
+    padding: 40px 24px;
+}
+
+.grid {
+    display: flex;
+    gap: 24px;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+
+    &_desktop {
+        width: 600px;
+    }
+
+    &_mobile {
+        width: 347px;
+
+        @include respond-mobile {
+            width: 100%;
+        }
+    }
+
+    @media (max-width: 959px) {
+        &_desktop {
+            display: none;
+        }
+    }
+}
+
+.label {
+    color: rgba(255, 255, 255, 0.945);
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 12px;
+
+    @media (max-width: 959px) {
+        display: none;
+    }
+}
+
+.rowDivider {
+    margin: 20px 0;
+    opacity: 0.42;
+}
