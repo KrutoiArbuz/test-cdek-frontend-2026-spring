@@ -37,11 +37,11 @@ const NewsCard = ({
     <div className={NewsCardClass}>
       {!hideCover && cover.images[0] && (
         <ImageBox
-          src={getImageUrl(cover.images[0].s)}
+          src={getImageUrl(cover.images[0].m)}
           alt={title}
           className={imageClass}
           srcSet={`${getImageUrl(cover.images[0].s)} 400w,${getImageUrl(cover.images[0].m)} 800w,${getImageUrl(cover.images[0].l)} 1200w,${getImageUrl(cover.images[0].hd)} 1920w`}
-          sizes={isBusiness ? '(max-width: 589px) 100vw, calc(100vw - 42px)' : '(max-width: 589px) 100vw, 184px'}
+          sizes={isBusiness ? '(max-width: 589px) 100vw, calc(100vw - 42px)' : '(max-width: 589px) 100vw, 500px'}
         />
       )}
       <div className={s.newsCard__content}>

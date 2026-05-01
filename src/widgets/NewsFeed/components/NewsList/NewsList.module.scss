@@ -6,7 +6,7 @@
 .divider {
     display: none;
 
-    @include respond-mobile {
+    @include respond-widget-mobile {
         display: block;
     }
 }
@@ -16,7 +16,7 @@
     flex-direction: column;
     gap: $space-sm;
 
-    @include respond-mobile {
+    @include respond-widget-mobile {
         gap: 0;
     }
 

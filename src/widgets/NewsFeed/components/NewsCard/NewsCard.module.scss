@@ -19,7 +19,7 @@
         flex-shrink: 0;
 
         &_hideMobile {
-            @include respond-mobile {
+            @include respond-widget-mobile {
                 display: none;
             }
         }
@@ -49,7 +49,7 @@
         gap: $space-xs;
     }
 
-    @include respond-mobile {
+    @include respond-widget-mobile {
         flex-direction: column;
 
         &__image {

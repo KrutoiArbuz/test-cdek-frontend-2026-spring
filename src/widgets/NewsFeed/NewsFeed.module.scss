@@ -1,15 +1,20 @@
 @use '../../shared/styles/variables' as *;
 @use '../../shared/styles/mixins' as *;
 
+.newsFeedRoot {
+    container-type: inline-size;
+    container-name: news-feed;
+}
 
 .newsFeed {
     display: flex;
     flex-direction: column;
     gap: $space-xs;
+    background-color: var(--color-bg-surface, $color-bg-surface);
     border-radius: $border-radius-lg;
     padding: $space-md;
 
-    @include respond-mobile {
+    @include respond-widget-mobile {
         padding: $space-sm;
     }
 }
