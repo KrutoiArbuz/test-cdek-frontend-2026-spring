@@ -1,4 +1,5 @@
 import clsx from 'clsx';
+import { AnimatePresence, motion } from 'framer-motion';
 import { useState } from 'react';
 
 import Divider from '@/shared/ui/Divider';
@@ -7,6 +8,7 @@ import Skeleton from '@/shared/ui/Skeleton';
 import { formatMonthYear } from '@/shared/utils/formatDate';
 
 import s from './NewsFeed.module.scss';
+import { pageVariants } from './animations';
 import NewsFeedHeader from './components/NewsFeedHeader';
 import NewsList from './components/NewsList';
 import { useNewsPagesQuery } from './hooks/useNewsQueries';
@@ -62,12 +64,22 @@ const NewsFeed = ({ variant, empty, className }: NewsFeedProps) => {
             <ErrorState />
           ) : isLoading || newsList.length > 0 ? (
             <>
-              <NewsList
-                newsList={newsList}
-                variant={variant}
-                isLoading={isLoading}
-                pageSize={PAGE_SIZE}
-              />
+              <AnimatePresence mode="wait">
+                <motion.div
+                  key={page}
+                  variants={pageVariants}
+                  initial="hidden"
+                  animate="visible"
+                  exit="exit"
+                >
+                  <NewsList
+                    newsList={newsList}
+                    variant={variant}
+                    isLoading={isLoading}
+                    pageSize={PAGE_SIZE}
+                  />
+                </motion.div>
+              </AnimatePresence>
               <Pagination
                 className={s.pagination}
                 isPrevPageDisabled={isLoading || page === 1}

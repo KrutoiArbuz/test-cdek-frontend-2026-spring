@@ -1,12 +1,15 @@
 import clsx from 'clsx';
+import { motion } from 'framer-motion';
 import { Fragment } from 'react';
 
 import Divider from '@/shared/ui/Divider';
 
+import { cardVariants, listVariants } from '../../animations';
 import type { NewsDto } from '../../types/newsType';
 import NewsCard, { NewsCardSkeleton } from '../NewsCard';
 
 import s from './NewsList.module.scss';
+
 type NewsListProps = {
   className?: string;
   newsList: NewsDto[];
@@ -33,9 +36,14 @@ const NewsList = ({ className, newsList, variant, isLoading, pageSize = 3 }: New
   }
 
   return (
-    <div className={newsListClass}>
+    <motion.div
+      className={newsListClass}
+      variants={listVariants}
+      initial="hidden"
+      animate="visible"
+    >
       {newsList.map((news, index) => (
-        <Fragment key={news.id}>
+        <motion.div key={news.id} variants={cardVariants}>
           <NewsCard
             news={news}
             variant={variant}
@@ -44,9 +52,9 @@ const NewsList = ({ className, newsList, variant, isLoading, pageSize = 3 }: New
             hideCoverOnMobile={index !== 0}
           />
           {index < newsList.length - 1 && <Divider className={s.divider} />}
-        </Fragment>
+        </motion.div>
       ))}
-    </div>
+    </motion.div>
   );
 };
 
