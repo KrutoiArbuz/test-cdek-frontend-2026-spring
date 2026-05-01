@@ -1,0 +1,30 @@
+@use '../../../../shared/styles/variables' as *;
+@use '../../../../shared/styles/mixins' as *;
+
+
+
+.divider {
+    display: none;
+
+    @include respond-widget-mobile {
+        display: block;
+    }
+}
+
+.newsList {
+    display: flex;
+    flex-direction: column;
+    gap: $space-sm;
+
+    @include respond-widget-mobile {
+        gap: 0;
+    }
+
+    &_business {
+        gap: 0;
+
+        .divider {
+            display: block;
+        }
+    }
+}

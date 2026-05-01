@@ -1,0 +1,17 @@
+@use '../../styles/variables' as *;
+
+.iconButton {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: $space-xxxs;
+
+    &:disabled {
+        color: var(--color-text-second);
+        cursor: not-allowed;
+    }
+
+    &:hover:not(:disabled) {
+        color: var(--color-text-second);
+    }
+}

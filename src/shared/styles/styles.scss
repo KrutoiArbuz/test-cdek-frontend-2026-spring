@@ -1,0 +1,67 @@
+@use './variables' as *;
+@use './PTSans/fonts' as *;
+@use './TTFellows/fonts' as *;
+
+:root {
+    --color-bg-surface: #{$color-bg-surface};
+    --color-text-main: #{$color-text-main};
+    --color-text-second: #{$color-text-second};
+    --color-border-light: #{$color-border-light};
+
+    --color-badge-blue-bg: #{$color-badge-blue-bg};
+    --color-badge-blue-text: #{$color-badge-blue-text};
+    --color-badge-gray-bg: #{$color-badge-gray-bg};
+    --color-badge-gray-text: #{$color-badge-gray-text};
+    --color-badge-yellow-bg: #{$color-badge-yellow-bg};
+    --color-badge-yellow-text: #{$color-badge-yellow-text};
+
+    --skeleton-bg-light: #{$skeleton-1};
+    --skeleton-bg-dark: #{$skeleton-2};
+}
+
+html,
+body {
+    font-family: $font-secondary;
+    margin: 0;
+    padding: 0;
+    color: $color-text-main;
+    scrollbar-gutter: stable;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+figure,
+pre {
+    margin: 0;
+}
+
+ul,
+ul li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button {
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    font: inherit;
+    color: inherit;
+    cursor: pointer;
+}

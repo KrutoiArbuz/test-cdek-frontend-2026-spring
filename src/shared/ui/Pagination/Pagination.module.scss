@@ -1,0 +1,7 @@
+@use '../../styles/variables' as *;
+
+.pagination {
+    display: flex;
+    flex-direction: row;
+    gap: $space-xs;
+}

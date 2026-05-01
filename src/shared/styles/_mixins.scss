@@ -1,0 +1,18 @@
+@use './variables' as *;
+
+
+@mixin respond-mobile {
+
+    @media (max-width: $breakpoint-md) {
+        @content;
+    }
+
+}
+
+@mixin respond-widget-mobile {
+
+    @container news-feed (max-width: #{$breakpoint-md - 1px}) {
+        @content;
+    }
+
+}
